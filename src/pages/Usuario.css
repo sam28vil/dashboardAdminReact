@@ -1,0 +1,140 @@
+h1{
+    text-align: center;
+    color: white;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+p{
+    text-align: center;
+    color: white;
+}
+
+.principal{
+    background-image: url("../../src/assets/background.jpg");
+    grid-area: main;
+    overflow-y: auto;
+}
+
+.main__container{
+    padding: 5px 35px;
+}
+
+
+.form {
+    display: flex;
+    width: 100%;
+    color: #CCC;
+    border-collapse: collapse;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+  }
+  
+  .form .section {
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 50px;
+  }
+  
+  .form .section .control-group {
+    margin-top: 10px;
+  }
+  
+  .form .section .control-group .control {
+    width: 100%;
+  }
+  
+  
+  .form .section .control-group .control-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    padding: auto;
+    color: white;
+    align-items: center;
+  }
+  
+  tr:nth-child(even){background-color: #CCC}
+  
+  th {
+    background-color: black;
+    color: white;
+  }
+
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  input[type=text]:focus {
+    width: 100%;
+    
+}
+
+
+#botao{ text-align: center }
+.botaoEnviar{
+    width: 300px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+
+}
+.button {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: black;
+  }
+  
+
+@media only screen and (max-width:855px){
+  table {
+    display: inline-block;
+    }
+    .main__container{
+      padding: auto;
+    }
+   
+        
+}
+

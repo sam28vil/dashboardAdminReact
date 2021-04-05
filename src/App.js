@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import {useState} from 'react';
+
+import {BrowserRouter} from 'react-router-dom'
+
+import Navbar from './components/navbar/Navbar';
+
+import Sidebar from './components/sidebar/Sidebar';
+
+import Footer from './components/footer/Footer';
+
+import Routes from './Routes'
 import './App.css';
 
-function App() {
+
+
+const App = () => {
+
+  const  [ sidebarOpen, setSidebarOpen] = useState(false);
+  const openSidebar = () =>{
+    setSidebarOpen(true);
+  };
+  const closeSidebar = () =>{
+    setSidebarOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+
+    <div className="container">
+      <BrowserRouter>
+
+      <Routes/>
+      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+      
+      <Footer sidebarOpen={sidebarOpen} openSidebar={openSidebar}/>
+      </BrowserRouter>
+      
+      
+      
     </div>
+    
+
+    
+    
   );
 }
 
